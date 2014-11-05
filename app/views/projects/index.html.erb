@@ -46,6 +46,7 @@
                 <% spanicon = content_tag(:span, "&nbsp; ".html_safe, {:onclick => openonclick, :class => "expander"}) %>
             <% else %>
                 <% classes += " child" %>
+		<% spanicon = content_tag(:span, "&nbsp; ".html_safe, {:onclick => openonclick, :class => "dummyexpander"}) %>
             <% end %>
             <% if(project.parent_id == nil) %>
                 <% ancestors.clear %>
@@ -81,7 +82,7 @@
                               h(project.name) %>
                   <%= content_tag :span, '&nbsp;'.html_safe, :onclick => openonclick, :class => "empty #{User.current.member_of?(project) ? 'my-project' : nil}"%>
                 </td>
-                <td align="center"><%= format_date(project.created_on) %></td>
+                <td align="center" style='white-space: nowrap'><%= format_date(project.created_on) %></td>
                 <%= content_tag :td, :onclick => openonclick do -%><%= textilizable (project.short_description.blank? && "" ) || project.short_description.gsub(/\!.+\!/,""), :project => project %><% end -%>
 		<%#                <td><%= favorite_project_modules_links(project) % ></td> %>
 		<%#                <td><%= render_project_progress(project) % ></td>        %>

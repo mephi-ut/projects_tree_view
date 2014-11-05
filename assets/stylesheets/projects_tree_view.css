@@ -2,6 +2,7 @@ tr.parent { border: 1px solid #f8f8f8; }
 tr.parent td.name { white-space: nowrap;  width: 300px; }
 tr.child  { border: 1px solid #f8f8f8; }
 tr.child  td.name { white-space: nowrap;  width: 300px; }
+tr.child  span.dummyexpander {background-image: url(../images/tree_bullet_toggle_dummy.png); padding-left: 8px; margin-left: 0; cursor: pointer; background-position: center; background-repeat: no-repeat; }
 tr.parent span.expander {background-image: url(../images/tree_bullet_toggle_plus.png); padding-left: 8px; margin-left: 0; cursor: pointer; background-position: center; background-repeat: no-repeat; }
 span.empty { text-align:right; width: 100%; cursor: pointer;}
 tr.parent.open span.expander {background-image: url(../images/tree_bullet_toggle_minus.png); cursor: pointer; background-position: center; background-repeat: no-repeat; }
